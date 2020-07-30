@@ -3,12 +3,15 @@ class Form {
     this.input=createInput("");
 this.button=createButton("Play");
 this.greeting=createElement('h3');
+// added
+this.title = createElement('h2');
   }
 
   display(){
-    var title = createElement('h2')
-    title.html("Car Racing Game");
-    title.position(displayWidth/2, 0);
+    //**removed var title = createElement('h2')
+    //added this.title
+    this.title.html("Car Racing Game");
+    this.title.position(displayWidth/2 - 50, 0);
     this.input.position(displayWidth/2-40, displayHeight/2-80);
     this.button.position(displayWidth/2+30, displayHeight/2);
 

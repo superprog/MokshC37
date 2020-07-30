@@ -32,27 +32,29 @@ class Game {
   {
     form.hide();
     textSize(30);
-    text("Game Start", 120,100);
+    //no need of this
+    // text("Game Start", 120,100);
+    var index=0;
+      var x=0;
+      var y;
+     // var a=0;
     Player.getPlayerInfo();
     if(allPlayers!=undefined)
     {
      // var position =130;  
-      var index=0;
-      var x=0;
-      var y=0;
-      var a=0;
-      console.log(allPlayers);
+      
+      //console.log(allPlayers);
 for(var plr in allPlayers)
 {
   if(index<= 3)
   {
-      index= index+1;
-a=index-1;
+      index= index + 1;
+//a=index-1;
      // console.log(cars[a]);
       x+=200;
       y=displayHeight-allPlayers[plr].distance
-cars[a]. x = x;
-cars[a].y=y;
+      cars[index-1].x=x;
+      cars[index-1].y=y;
   }
  /* if(plr==="player"+ player.index)
   {
@@ -75,9 +77,11 @@ if(index===player.index)
 }
 if(keyIsDown(UP_ARROW)&& player.index!=null)
 {
-player.dist+=50;
+player.dist+=10;
 player.update();
 }
     }
+    //add drawSprites here to display sprites
+    drawSprites();
   }
 }
